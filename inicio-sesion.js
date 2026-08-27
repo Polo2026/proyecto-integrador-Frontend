@@ -14,6 +14,20 @@ iniciarSesion();
 
 
 //Verificar mediante condicionales si las credenciales son correctas.
+function verificarCredenciales(usuario, contraseña) {
+
+    const usuarioCorrecto = "admin";
+    const contraseñaCorrecta = "12345";
+
+    if (usuario === usuarioCorrecto && contraseña === contraseñaCorrecta) {
+    
+        console.log("Credenciales correctas. Acceso permitido.");
+        return true;
+    } else {
+        console.log("Usuario o contraseña incorrectos.");
+        return false;
+    }
+}
 
 
 //Permitir el acceso cuando los datos sean válidos.
