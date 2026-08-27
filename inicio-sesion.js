@@ -1,10 +1,10 @@
 //Solicitar al usuario el ingreso del nombre de usuario y la contraseña.
 function iniciarSesion() {
-  let usuario = prompt("Ingrese su nombre de usuario:");
-  let contrasena = prompt("Ingrese su contraseña:");
+  let usuario = "Maria ";
+  let contrasena = " 123";
 
-  console.log("Usuario ingresado: " + usuario);
-  console.log("Contraseña ingresada: " + contrasena);
+  console.log("Ingrese su nombre: " + usuario);
+  console.log("Ingrese su contrasena: " + contrasena);
 }
 
 iniciarSesion();
