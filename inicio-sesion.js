@@ -36,11 +36,35 @@ function verificarCredenciales(usuario, contraseña) {
 //Indicar cuando los datos sean incorrectos.
 
 
-//Utilizar un ciclo para controlar los intentos de acceso.
+//4Utilizar un ciclo para controlar los intentos de acceso.
+//5Mostrar un mensaje de bloqueo cuando se superen tres intentos fallidos
 
+function controlarAcceso() {
+  const maxIntentos = 3;
+  let intentos = 0;
+  let acceso = false;
 
-//Mostrar un mensaje de bloqueo cuando se superen tres intentos fallidos
+  while (intentos < maxIntentos && !acceso) {
+    // Aquí simulas el ingreso de datos (podrías usar prompt() en un navegador)
+    let usuarioIngresado = prompt("Ingrese su usuario:");
+    let contrasenaIngresada = prompt("Ingrese su contraseña:");
 
+    acceso = verificarCredenciales(usuarioIngresado, contrasenaIngresada);
+
+    if (!acceso) {
+      intentos++;
+      console.log(`Intento ${intentos} de ${maxIntentos} fallido.`);
+    }
+  }
+
+  if (acceso) {
+    console.log("¡Bienvenido! Acceso concedido.");
+  } else {
+    console.log("Ha superado el número máximo de intentos. Cuenta bloqueada.");
+  }
+}
+
+controlarAcceso();
 
 
 //Hola Mundo
