@@ -67,9 +67,4 @@ function controlarAcceso() {
 controlarAcceso();
 
 
-//Hola Mundo
-
-
-
-//Hola soy Seleny
 
