@@ -8,7 +8,7 @@ function iniciarSesion() {
 }
 
 iniciarSesion();
-
+/*
 
 //Leer e imprimir los datos por consola.
 
@@ -58,4 +58,5 @@ function controlarAcceso() {
     }
 }
 
-controlarAcceso();
+controlarAcceso();  */
+
