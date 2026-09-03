@@ -1,7 +1,7 @@
 //Solicitar al usuario el ingreso del nombre de usuario y la contraseña.
 function iniciarSesion() {
-    let usuario = "Maria ";
-    let contrasena = " 123";
+    let usuario;
+    let contrasena;
 
     console.log("Ingrese su nombre: " + usuario);
     console.log("Ingrese su contrasena: " + contrasena);
@@ -21,27 +21,17 @@ function verificarCredenciales(usuario, contraseña) {
 
     if (usuario === usuarioCorrecto && contraseña === contraseñaCorrecta) {
 
-        console.log("Credenciales correctas. Acceso permitido.");
+        console.log("Credenciales correctas. Acceso permitido."); 
+        console.log("Bienvenido, " + usuario + "!");   //Permitir el acceso cuando los datos sean válidos.
         return true;
     } else {
-        console.log("Usuario o contraseña incorrectos.");
+        console.log("Usuario o contraseña incorrectos.");  //Indicar cuando los datos sean incorrectos.
         return false;
     }
 }
 
-
-//Permitir el acceso cuando los datos sean válidos.
-
-
-//Indicar cuando los datos sean incorrectos.
-
-if (usuario !== usuarioCorrecto || contraseña !== contraseñaCorrecta) {
-    console.log("Datos incorrectos. Intente nuevamente.");
-}
-
-
-//4Utilizar un ciclo para controlar los intentos de acceso.
-//5Mostrar un mensaje de bloqueo cuando se superen tres intentos fallidos
+//Utilizar un ciclo para controlar los intentos de acceso.
+//Mostrar un mensaje de bloqueo cuando se superen tres intentos fallidos
 
 function controlarAcceso() {
     const maxIntentos = 3;
@@ -49,7 +39,7 @@ function controlarAcceso() {
     let acceso = false;
 
     while (intentos < maxIntentos && !acceso) {
-        // Aquí simulas el ingreso de datos (podrías usar prompt() en un navegador)
+
         let usuarioIngresado = prompt("Ingrese su usuario:");
         let contrasenaIngresada = prompt("Ingrese su contraseña:");
 
