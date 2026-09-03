@@ -1,5 +1,6 @@
 
-// Solicitar al usuario el ingreso del nombre de usuario y la contraseña,
+//Sistema de Inicio de sesión 
+//Solicitar al usuario el ingreso del nombre de usuario y la contraseña,
 // leerlos e imprimirlos por consola.
 function iniciarSesion() {
     let usuario = prompt("Ingrese su nombre:");
