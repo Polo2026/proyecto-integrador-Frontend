@@ -1,5 +1,5 @@
 
-//Sistema de Inicio de sesión 
+//Sistema de Inicio de Sesión 
 //Solicitar al usuario el ingreso del nombre de usuario y la contraseña,
 // leerlos e imprimirlos por consola.
 function iniciarSesion() {
