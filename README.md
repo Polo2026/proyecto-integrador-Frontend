@@ -34,7 +34,7 @@ El script está dividido de forma modular en tres funciones principales:
 
 ## Autores
 
-María Fernanda Montoya Restrepo
-Seleny Meza Suaréz
-Dahiana Zapata Tabares
+María Fernanda Montoya Restrepo  
+Seleny Meza Suaréz  
+Dahiana Zapata Tabares  
 Cristian Polo Gutiérrez
