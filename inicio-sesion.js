@@ -36,7 +36,7 @@ function controlarAcceso() {
     let acceso = false;
 
     while (intentos < maxIntentos && !acceso) {
-        // Reutilizamos iniciarSesion() para pedir los datos en cada intento.
+        // Se utiliza la función iniciarSesion() para pedir los datos en cada intento.
         const { usuario, contrasena } = iniciarSesion();
 
         acceso = verificarCredenciales(usuario, contrasena);

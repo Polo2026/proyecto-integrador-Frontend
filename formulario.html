@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE San Antonio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilospropios.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <header>
+        <div id="fondoCabeza">
+            <div id="cajaLogo">
+                <img src="imagenes/colegio.png" id="logo" alt="Logo IE San Antonio">
+            </div>
+            <div id="textoLogo">
+                <span class="nombre-colegio">IE San Antonio</span>
+                <span class="ciudad">Rionegro, Antioquia</span>
+            </div>
+        </div>
+        <!-- MENÚ -->
+
+        <nav id="menuPpal">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Portal Estudiantes</a></li>
+                <li><a href="#">Portal Profesores</a></li>
+                <li><a href="#">Actividades Extra-Curriculares</a></li>
+                <li><a href="#">Notas y Asistencias</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+<br>
+<br>
+
+
+    <main>
+    <!-- NUEVA SECCIÓN DE REGISTRO DE ESTUDIANTES -->
+<section id="seccion-registro">
+    <div class="contenedor-registro">
+        <h2>Registro de Estudiantes</h2>
+        <p>Completa el formulario para solicitar tu vinculación a la plataforma institucional.</p>
+        
+        <form action="#" method="POST">
+            <!-- Bloque de Dos Columnas para Datos Personales -->
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="reg-nombres">Nombres Completos:</label>
+                    <input type="text" id="reg-nombres" name="nombres" placeholder="Ej: Juan Carlos" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="reg-apellidos">Apellidos Completos:</label>
+                    <input type="text" id="reg-apellidos" name="apellidos" placeholder="Ej: Pérez Gómez" required>
+                </div>
+            </div>
+
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="tipo-doc">Tipo de Documento:</label>
+                    <select id="tipo-doc" name="tipo_documento" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="TI">Tarjeta de Identidad (T.I.)</option>
+                        <option value="RC">Registro Civil</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="num-doc">Número de Documento:</label>
+                    <input type="text" id="num-doc" name="documento" placeholder="Ej: 1040XXXXXX" required>
+                </div>
+            </div>
+
+            <!-- Bloque de Dos Columnas para Datos Escolares -->
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="grado">Grado al que Aspira/Pertenece:</label>
+                    <select id="grado" name="grado" required>
+                        <option value="" disabled selected>Selecciona el grado</option>
+                        <option value="6">Sexto (6°)</option>
+                        <option value="7">Séptimo (7°)</option>
+                        <option value="8">Octavo (8°)</option>
+                        <option value="9">Noveno (9°)</option>
+                        <option value="10">Décimo (10°)</option>
+                        <option value="11">Once (11°)</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="reg-correo">Correo Electrónico:</label>
+                    <input type="email" id="reg-correo" name="correo" placeholder="Ej: juan.perez@colegio.com" required>
+                </div>
+            </div>
+
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="reg-contrasena">Crear Contraseña:</label>
+                    <input type="password" id="reg-contrasena" name="contrasena" placeholder="Mínimo 8 caracteres" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="conf-contrasena">Confirmar Contraseña:</label>
+                    <input type="password" id="conf-contrasena" name="confirmar_contrasena" placeholder="Repite la contraseña" required>
+                </div>
+            </div>
+
+            <!-- Aceptación de Términos y Tratamiento de Datos (Ley de Protección de Datos Colombia) -->
+            <div class="terminos-registro">
+                <label>
+                    <input type="checkbox" name="acepta_terminos" required> 
+                    Acepto la política de tratamiento de datos personales de la institución educativa.
+                </label>
+            </div>
+            
+            <button type="submit" class="btn-registrar">Registrar Estudiante</button>
+            
+            <div class="enlace-retorno">
+                <p>¿Ya tienes una cuenta? <a href="#seccion-login">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </div>
+</section>

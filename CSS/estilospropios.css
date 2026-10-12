@@ -1,0 +1,855 @@
+/* ====== IE SAN ANTONIO — Estilos Propios ========= */
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: #f97900 40%;
+    color: #222222;
+}
+#fondoCabeza {
+    width: 100%;
+    background-color: #f97900;
+    background-image: linear-gradient(135deg, #f97900 60%, #c85e00 100%);
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+#cajaLogo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+#logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+#textoLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.nombre-colegio {
+    color: #ffffff;
+    font-size: 44px;
+    font-family: "Fontdiner Swanky", serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+.ciudad {
+    color: #fff3e0;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+#menuPpal {
+    background-color: #5c7a10;
+    padding: 0;
+    text-align: center;
+    
+}
+#menuPpal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#menuPpal li {
+    display: inline-block;
+}
+#menuPpal a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 16px;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.3s, border-bottom 0.3s;
+    border-radius: 5px;
+}
+#menuPpal a:hover {
+    background-color: #f97900;
+    border-bottom: 3px solid #c85e00;
+}
+#seccion1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 50px 40px;
+    gap: 40px;
+    background-color: #fddd99 ;
+}
+#textoPpal {
+    width: 50%;
+}
+#contVideo {
+    width: 25%;
+    text-align: center;
+}
+#textoPpal h1 {
+    font-family: "Fontdiner Swanky", serif;
+    color: #f97900;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.parraItalica {
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444444;
+    border-left: 5px solid #f97900;
+    padding-left: 18px;
+    background-color: #fff8f0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 8px 8px 0;
+}
+#videoPpal {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid #f97900;
+}
+#seccion2 {
+    background-color: #d2e8aa;
+    padding: 50px 30px;
+    text-align: center;
+}
+#seccion2 h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: #3a6b00;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+#felicitacion {
+    font-size: 25px;
+    color: #20310a;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-family: fantasy;
+}
+#contenedorHonor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.tarjeta-honor {
+    background-color: #ffffff;
+    border-top: 6px solid #f97900;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 210px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+.tarjeta-honor h3 {
+    font-family: "Fontdiner Swanky", serif;
+    color: #f97900;
+    font-size: 20px;
+    margin-bottom: 14px;
+    text-align: center;
+    border-bottom: 2px dashed #d2e8aa;
+    padding-bottom: 8px;
+}
+.tarjeta-honor ul {
+    list-style: none;
+    padding: 0;
+}
+.tarjeta-honor li {
+    font-size: 15px;
+    color: #333333;
+    padding: 5px 0;
+    font-family: cursive;
+    border-bottom: 1px solid #f0f0f0;
+}
+#seccion3 {
+    padding: 50px 30px;
+    background-color: #fddd99;
+    text-align: center;
+}
+#seccion3 h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: #e31545;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+#seccion3 h2:first-child {
+    margin-top: 0;
+}
+.contenedor-tabla {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+th {
+    background-color: #f97900;
+    color: #ffffff;
+    padding: 14px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+td {
+    padding: 11px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    color: #333333;
+    text-align: center;
+}
+tr:hover {
+    background-color: #ffe44e;
+}
+.nivel {
+    font-weight: 700;
+    background-color: #5c7a10;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 14px;
+}
+.nivel-primaria {
+    font-weight: 700;
+    background-color: #f29d1e !important;  
+    color: #ffffff !important;
+    text-align: left;
+    padding-left: 14px;
+}
+.si {
+    color: #2e7d00;
+    font-weight: 700;
+    font-size: 18px;
+}
+.destacado {
+    background-color: #f97900;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px;
+    text-align: center;
+}
+.aniversario {
+    background-color: #ffd54f;
+    color: #5d4037;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+#footer {
+    background-color: #f3c15d;
+    background-image: linear-gradient(180deg, #f3c15d, #e8a830);
+    padding: 35px 25px 15px 25px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.box {
+    flex: 1;
+    min-width: 230px;
+    background-color: #ffffff;
+    border: 2px solid #7aad1e;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+h4 {
+    color: #f97900;
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f3c15d;
+    padding-bottom: 8px;
+}
+/* --- Formulario --- */
+.box label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555555;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+.box input[type="text"],
+.box input[type="tel"],
+.box input[type="email"],
+.box textarea,
+.box select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #fafafa;
+}
+.box input[type="text"]:focus,
+.box input[type="tel"]:focus,
+.box input[type="email"]:focus,
+.box textarea:focus,
+.box select:focus {
+    outline: none;
+    border-color: #f97900;
+    background-color: #fff8f0;
+}
+.grupo-radio {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    font-size: 14px;
+}
+.grupo-radio label {
+    font-weight: normal;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.box input[type="submit"] {
+    margin-top: 16px;
+    background-color: #f97900;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+.box input[type="submit"]:hover {
+    background-color: #c85e00;
+}
+/* --- Lista de profesores --- */
+.lista-profes {
+    list-style: none;
+    padding: 0;
+}
+.lista-profes > li {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #d2e8aa;
+}
+.lista-profes > li:last-child {
+    border-bottom: none;
+}
+.lista-profes > li strong {
+    display: block;
+    font-size: 15px;
+    color: #3a6b00;
+    margin-bottom: 6px;
+}
+.lista-profes > li ul {
+    list-style: circle;
+    margin-left: 20px;
+}
+.lista-profes > li ul li {
+    font-size: 14px;
+    color: #555555;
+    padding: 2px 0;
+}
+/* --- Contacto --- */
+#contacto p {
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.redes {
+    margin-top: 18px;
+    text-align: center;
+}
+.redes img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#copyright {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 14px;
+    border-top: 1px solid #c98e1a;
+}
+#copyright p {
+    font-size: 13px;
+    color: #7a5c00;
+    font-weight: 600;
+}
+.profe-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+.info-profe {
+    flex: 1;
+}
+.info-profe strong {
+    display: block;
+    font-size: 14px;
+    color: #3a6b00;
+    margin-bottom: 5px;
+}
+.info-profe ul {
+    list-style: circle;
+    margin-left: 16px;
+}
+.info-profe ul li {
+    font-size: 12px;
+    color: #555555;
+    padding: 1px 0;
+}
+.foto-profe {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: center;
+    border: 3px solid #f97900;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+.mapa-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5c7a10;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.mapa-contenedor {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 4px solid #f97900;
+    box-shadow: 0 6px 20px rgba(249, 121, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 40%;
+    height: 370px;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+.mapa-contenedor:hover {
+    box-shadow: 0 10px 28px rgba(249, 121, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+/* Contenedor principal que alinea las fotos en fila */
+.cinta-fotos {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    gap: 15px;                      /* Espacio entre cada foto */
+    width: 100%;
+    max-width: 1200px;              /* Ajusta esto al ancho máximo de tu página */
+    margin: 20px auto;              /* Separa del menú verde y centra el bloque */
+    padding: 0 10px;                /* Margen interno para que no toque los bordes físicos */
+    box-sizing: border-box;
+}
+
+/* Caja contenedora de cada foto individual */
+.foto-item {
+    flex: 1;                        /* Hace que todas las fotos midan exactamente lo mismo */
+    height: 180px;                  /* Altura fija para mantener el orden */
+    overflow: hidden;
+           /* Bordes redondeados que combinan con tu diseño */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Suave sombra para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Comportamiento de la imagen dentro de la caja */
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;              /* Corta la imagen proporcionalmente sin deformarla */
+    transition: filter 0.3s ease;
+}
+
+/* Efecto visual cuando el usuario pasa el mouse por encima */
+.foto-item:hover {
+    transform: translateY(-5px);    /* Levanta ligeramente la foto */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.foto-item:hover img {
+    filter: brightness(1.05);       /* Le da un toque extra de luz al interactuar */
+}
+
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN DE LOGIN
+   ========================================== */
+
+#seccion-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+     /* Fondo suave para resaltar el formulario */
+}
+
+.contenedor-login {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+       font-family: 'Nunito', sans-serif;
+}
+
+.contenedor-login h2 {
+    font-family: 'Fontdiner Swanky', cursive; /* Estilo de título de la institución */
+    color: #f97900; /* Azul institucional */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contenedor-login p {
+    color: #666;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Campos de Formulario */
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px 5px; /* Ajusta el espacio interno */
+    
+    /* EL TRUCO PARA ELIMINAR LOS BORDES Y EL FONDO: */
+    background: transparent; /* Quita el fondo blanco perfecto */
+    border: none; /* Elimina todos los bordes grises delgados */
+    border-bottom: 2px solid #ccc; /* Añade solo una línea abajo */
+    border-radius: 0; /* Quita las esquinas redondeadas si las tenías */
+    
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* EFECTO ADICIONAL: Cuando el estudiante dé clic para escribir, la línea se pintará de naranja */
+.grupo-formulario input:focus {
+    border-bottom-color: #ff7f00; /* El color naranja de tu institución */
+    outline: none; /* Quita el borde azul que los navegadores ponen por defecto */
+}
+
+
+/* Opciones adicionales (Recordarme y Olvido) */
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.opciones-login input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+
+.olvido-pass:hover {
+    text-decoration: underline;
+}
+
+/* Botón de ingreso */
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #f97900; /* Color corporativo */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #2b6cb0; /* Cambio de color al pasar el cursor */
+}
+
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN DE REGISTRO
+   ========================================== */
+
+#seccion-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 40px 20px; /* Reducido arriba para no sobrecargar el espacio */
+    
+}
+
+.contenedor-registro {
+    background-color: #ffffff;
+    max-width: 650px;
+    width: 100%;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: none; /* sombra eliminada */
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenedor-registro h2 {
+    font-family: 'Fontdiner Swanky', cursive;
+    color: #f97900;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contenedor-registro p {
+    color: #666;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Diseño Flexbox para las filas de dos columnas */
+.fila-formulario {
+    display: flex;
+    gap: 20px;
+}
+
+.fila-formulario .grupo-formulario {
+    flex: 1; /* Hace que ambas columnas midan exactamente lo mismo */
+}
+
+/* Estilos específicos para las listas desplegables (Selects) */
+.grupo-formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-formulario select:focus {
+    border-color: #3182ce;
+    outline: none;
+}
+
+/* Casilla de términos y condiciones */
+.terminos-registro {
+    margin: 15px 0 25px 0;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.terminos-registro input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Botón de Registro */
+.btn-registrar {
+    width: 100%;
+    padding: 14px;
+    background-color: #f97900; /* Un tono de azul ligeramente distinto para diferenciar acciones */
+      border: none;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-registrar:hover {
+    background-color: #f97900;
+}
+
+/* Enlace inferior de retorno */
+.enlace-retorno {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.enlace-retorno a {
+    
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.enlace-retorno a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (Para celulares)
+   ========================================== */
+@media (max-width: 600px) {
+    .fila-formulario {
+        flex-direction: column; /* Convierte las dos columnas en una sola fila en pantallas móviles */
+        gap: 0;
+    }
+}
+/* =======================================================
+   ESTILOS MINIMALISTAS PARA LA SECCIÓN DE LOGIN (IE SAN ANTONIO)
+   ======================================================= */
+
+#seccion-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+     /* Combinado con el fondo amarillo claro de tu web */
+}
+
+.contenedor-login {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    padding: 35px;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+.contenedor-login h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: #f97900; /* Naranja corporativo de tu header */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.contenedor-login p {
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Aplicación del efecto mockup de alta fidelidad a las cajas de texto */
+.contenedor-login .grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.contenedor-login .grupo-formulario label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.contenedor-login .campo-lineal {
+    width: 100%;
+    padding: 10px 5px !important;
+    
+    /* REMOVER CAJAS, ESQUINAS Y FONDOS BLANCOS NATIVOS */
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #cccccc !important;
+    border-radius: 0 !important;
+    
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    color: #333333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el estudiante hace clic sobre la línea para escribir */
+.contenedor-login .campo-lineal:focus {
+    border-bottom-color: #f97900 !important; /* Línea cambia al naranja institucional */
+    outline: none !important;
+}
+
+/* Opciones de recordar sesión e hipervínculos inferiores */
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+.opciones-login label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+}
+
+.olvido-pass:hover {
+    text-decoration: underline;
+    color: #f97900;
+}
+
+/* Botón de Ingreso adaptado a los colores de tus botones de envío */
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #f97900;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #c85e00; /* Naranja oscuro, igual que en tu botón submit */
+}
