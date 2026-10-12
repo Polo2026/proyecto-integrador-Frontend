@@ -27,7 +27,7 @@
 
         <nav id="menuPpal">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="menu.html">Inicio</a></li>
                 <li><a href="#">Portal Estudiantes</a></li>
                 <li><a href="#">Portal Profesores</a></li>
                 <li><a href="#">Actividades Extra-Curriculares</a></li>
@@ -59,23 +59,26 @@
             <h2>Bienvenid@</h2>
             <p>Ingresa tus datos para acceder al portal virtual.</p>
             
-            <form action="#" method="POST">
+            <form id="formLogin" action="#" method="POST">
                 <div class="grupo-formulario">
                     <label for="usuario">Usuario o Correo:</label>
-                    <input type="text" id="usuario" name="usuario" >
+                    <input type="text" id="usuario" name="usuario" required>
                 </div>
-                
+
                 <div class="grupo-formulario">
                     <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" >
+                    <input type="password" id="contrasena" name="contrasena" required>
                 </div>
-                
+
                 <div class="opciones-login">
-                    <label> Recordarme</label>
+                    <label for="recordarme">
+                    <input type="checkbox" id="recordarme" name="recordarme"> Recordarme
+                    </label>
                     <a href="#" class="olvido-pass">¿Olvidaste tu contraseña?</a>
                 </div>
-                
-                <button type="submit" class="btn-ingresar">Ingresar al Portal</button>
+
+                    <button type="submit" class="btn-ingresar">Ingresar al Portal</button>
+                    <a href="formulario.html" class="btn-registrarse">Registrarse</a>
             </form>
         </div>
     </section>
