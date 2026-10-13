@@ -10,7 +10,7 @@ const Contrasena = document.getElementById("reg-contrasena");
 let editIndex = null;
 
 // Evento del formulario
-formulario.addEventListener("submit", function(evento){
+formulario.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
     // Obtener valores del formulario
@@ -25,12 +25,9 @@ formulario.addEventListener("submit", function(evento){
     // Obtener lista actual
     let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
 
-    // Validar que la cédula no esté repetida
-    let existe = listaEstudiantes.some(function(
-        est,
-        i
-    ) {
-        return est.documento === numDoc && i !== editIndex;
+    // Validar que la cédula o otro no esté repetida
+    let existe = listaEstudiantes.some((estudiante, i) => {
+        return estudiante.documento === numDoc && i !== editIndex;
     });
 
     if (existe) {
@@ -38,7 +35,7 @@ formulario.addEventListener("submit", function(evento){
         return;
     }
 
-    if(editIndex !== null) {
+    if (editIndex !== null) {
         // Actualizar estudiante existente
         listaEstudiantes[editIndex] = {
             nombres,
@@ -80,18 +77,19 @@ function mostrarEstudiantes() {
     let cuerpoTabla = document.querySelector("#tabla-estudiantes tbody");
     cuerpoTabla.innerHTML = "";
 
-    if(listaEstudiantes.length === 0){
+    if (listaEstudiantes.length === 0) {
         document.getElementById("contenedor-tabla").style.display = "none";
     } else {
         document.getElementById("contenedor-tabla").style.display = "block";
-        listaEstudiantes.forEach((est, i) => {
+        listaEstudiantes.forEach((estudiante, i) => {
             let fila = document.createElement("tr");
+
             fila.innerHTML = `
-                <td>${est.nombres}</td>
-                <td>${est.apellidos}</td>
-                <td>${est.documento}</td>
-                <td>${est.grado}</td>
-                <td>${est.correo}</td>
+                <td>${estudiante.nombres}</td>
+                <td>${estudiante.apellidos}</td>
+                <td>${estudiante.documento}</td>
+                <td>${estudiante.grado}</td>
+                <td>${estudiante.correo}</td>
                 <td>
                     <button onclick="editar(${i})">Editar</button> |
                     <button onclick="eliminar(${i})">Eliminar</button>
@@ -105,15 +103,15 @@ function mostrarEstudiantes() {
 // Función para editar estudiante
 function editar(Editar) {
     let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
-    let est = listaEstudiantes[Editar];
+    let estudiante = listaEstudiantes[Editar];
 
-    Nombres.value = est.nombres;
-    Apellidos.value = est.apellidos;
-    TipoDoc.value = est.tipoDocumento;
-    NumDoc.value = est.documento;
-    Grado.value = est.grado;
-    Correo.value = est.correo;
-    Contrasena.value = est.contrasena;
+    Nombres.value = estudiante.nombres;
+    Apellidos.value = estudiante.apellidos;
+    TipoDoc.value = estudiante.tipoDocumento;
+    NumDoc.value = estudiante.documento;
+    Grado.value = estudiante.grado;
+    Correo.value = estudiante.correo;
+    Contrasena.value = estudiante.contrasena;
 
     editIndex = Editar; // guardamos el índice
 }
