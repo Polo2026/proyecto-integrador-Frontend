@@ -28,6 +28,9 @@ function verificarCredenciales(usuario, contrasena) {
     }
 }
 
+
+
+
 // Utilizar un ciclo para controlar los intentos de acceso.
 // Mostrar un mensaje de bloqueo cuando se superen tres intentos fallidos.
 function controlarAcceso() {
