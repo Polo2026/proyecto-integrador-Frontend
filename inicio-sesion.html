@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE San Antonio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilospropios.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <header>
+        <div id="fondoCabeza">
+            <div id="cajaLogo">
+                <img src="imagenes/colegio.png" id="logo" alt="Logo IE San Antonio">
+            </div>
+            <div id="textoLogo">
+                <span class="nombre-colegio">IE San Antonio</span>
+                <span class="ciudad">Rionegro, Antioquia</span>
+            </div>
+        </div>
+        
+
+        <nav id="menuPpal">
+            <ul>
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="#">Portal Estudiantes</a></li>
+                <li><a href="#">Portal Profesores</a></li>
+                <li><a href="#">Actividades Extra-Curriculares</a></li>
+                <li><a href="#">Notas y Asistencias</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+
+<section class="cinta-fotos">
+    <div class="foto-item">
+        <img src="imagenes/Carrete 1 .jpg" alt="Instalaciones">
+    </div>
+    <div class="foto-item">
+        <img src="imagenes/Carrete 2.jpg" alt="Estudiantes">
+    </div>
+    <div class="foto-item">
+        <img src="imagenes/images.jpg" alt="Eventos">
+    </div>
+    <div class="foto-item">
+        <img src="imagenes/COLEGIO.JPG" alt="Clases">
+    </div>
+</section>
+    <main>
+   
+    <section id="seccion-login">
+        <div class="contenedor-login">
+            <h2>Bienvenid@</h2>
+            <p>Ingresa tus datos para acceder al portal virtual.</p>
+            
+            <form id="formLogin" action="#" method="POST">
+                <div class="grupo-formulario">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+
+                <div class="opciones-login">
+                    <label for="recordarme">
+                    <input type="checkbox" id="recordarme" name="recordarme"> Recordarme
+                    </label>
+                    <a href="#" class="olvido-pass">¿Olvidaste tu contraseña?</a>
+
+
+                </div>
+                    <p id="mensajeLogin" class="mensaje-login"></p>
+
+
+
+                    <button type="submit" class="btn-ingresar">Ingresar al Portal</button>
+                    <a href="formulario.html" class="btn-registrarse">Registrarse</a>
+            </form>
+        </div>
+    </section>
+
+    <section class="box" id="contacto">
+        <h4>Información de Contacto</h4>
+        <div class="mapa-contenedor">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31704.23!2d-75.3789523!3d6.1490188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4687a40fc26bc9%3A0x7697f6f352b016c6!2sRionegro%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1699999999999" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <p>📍 Dirección: Calle 123 #00-11. Rionegro, Antioquia</p>
+        <p>📞 Teléfono: 300 000 0000</p>
+        <p>📧 Email: sanantonio@colegio.com</p>
+        <div class="redes">
+            <img src="imagenes/redes.png" alt="Redes Sociales">
+        </div>
+    </section> 
+</main>
+
+<script src="inicio-sesion.js"></script>
+</body>
+
+</html>
