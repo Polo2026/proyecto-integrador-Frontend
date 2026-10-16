@@ -1,0 +1,877 @@
+/* =====================================================================
+   IE SAN ANTONIO — Estilos propios
+   =====================================================================
+   ÍNDICE
+   1. Variables (colores)
+
+
+   
+   2. Reset (quita los estilos por defecto del navegador)
+   3. Base
+   4. Encabezado y menú
+   5. Cinta de fotos
+   6. Página de inicio (horizonte, cuadro de honor, tablas)
+   7. Pie de página (formulario, profes, contacto, mapa)
+   8. Formularios de acceso (login y registro)
+   9. Mensajes de la aplicación
+   10. Responsive (celulares)
+   ===================================================================== */
+
+
+/* =====================================================================
+   1. VARIABLES
+   Para cambiar un color de toda la página, se cambia aquí una sola vez.
+   Uso:  color: var(--naranja);
+   ===================================================================== */
+:root {
+    --naranja: #f97900;
+    --naranja-oscuro: #c85e00;
+    --verde: #5c7a10;
+    --verde-titulo: #3a6b00;
+    --verde-claro: #d2e8aa;
+    --crema: #fddd99;
+    --dorado: #f3c15d;
+    --rojo: #e31545;
+}
+
+
+/* =====================================================================
+   2. RESET
+   ===================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =====================================================================
+   3. BASE
+   ===================================================================== */
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    color: #222222;
+}
+
+h4 {
+    color: var(--naranja);
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--dorado);
+    padding-bottom: 8px;
+}
+
+
+/* =====================================================================
+   4. ENCABEZADO Y MENÚ
+   ===================================================================== */
+#fondoCabeza {
+    width: 100%;
+    background-color: var(--naranja);
+    background-image: linear-gradient(135deg, var(--naranja) 60%, var(--naranja-oscuro) 100%);
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+
+#cajaLogo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+#textoLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.nombre-colegio {
+    color: #ffffff;
+    font-size: 44px;
+    font-family: "Fontdiner Swanky", serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.ciudad {
+    color: #fff3e0;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#menuPpal {
+    background-color: var(--verde);
+    text-align: center;
+}
+
+#menuPpal li {
+    display: inline-block;
+}
+
+#menuPpal a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 16px;
+    border-bottom: 3px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+#menuPpal a:hover {
+    background-color: var(--naranja);
+    border-bottom: 3px solid var(--naranja-oscuro);
+}
+
+
+/* =====================================================================
+   5. CINTA DE FOTOS (fila de miniaturas bajo el menú)
+   ===================================================================== */
+.cinta-fotos {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;      /* separa del menú y centra el bloque */
+    padding: 0 10px;
+}
+
+.foto-item {
+    flex: 1;                /* todas las fotos miden lo mismo */
+    height: 180px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    rgb:
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* recorta sin deformar */
+    transition: filter 0.3s ease;
+}
+
+.foto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.foto-item:hover img {
+    filter: brightness(1.05);
+}
+
+
+/* =====================================================================
+   6. PÁGINA DE INICIO
+   ===================================================================== */
+
+/* --- 6.1 Horizonte institucional y video --- */
+#seccion1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 50px 40px;
+    gap: 40px;
+    background-color: var(--crema);
+}
+
+.textoPpal {
+    width: 50%;
+}
+
+.textoPpal h1 {
+    font-family: "Fontdiner Swanky", serif;
+    color: var(--naranja);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.parraItalica {
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444444;
+    border-left: 5px solid var(--naranja);
+    padding: 10px 0 10px 18px;
+    background-color: #fff8f0;
+    border-radius: 0 8px 8px 0;
+}
+
+#videoPpal {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--naranja);
+}
+
+/* --- 6.2 Cuadro de honor --- */
+#seccion2 {
+    background-color: var(--verde-claro);
+    padding: 50px 30px;
+    text-align: center;
+}
+
+#seccion2 h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: var(--verde-titulo);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#felicitacion {
+    font-size: 25px;
+    color: #20310a;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+#contenedorHonor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-honor {
+    background-color: #ffffff;
+    border-top: 6px solid var(--naranja);
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 210px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.tarjeta-honor h3 {
+    font-family: "Fontdiner Swanky", serif;
+    color: var(--naranja);
+    font-size: 20px;
+    margin-bottom: 14px;
+    text-align: center;
+    border-bottom: 2px dashed var(--verde-claro);
+    padding-bottom: 8px;
+}
+
+.tarjeta-honor li {
+    font-size: 15px;
+    color: #333333;
+    padding: 5px 0;
+    font-family: cursive;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* --- 6.3 Calendario y actividades (tablas) --- */
+#seccion3 {
+    padding: 50px 30px;
+    background-color: var(--crema);
+    text-align: center;
+}
+
+#seccion3 h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: var(--rojo);
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#seccion3 h2:first-child {
+    margin-top: 0;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th {
+    background-color: var(--naranja);
+    color: #ffffff;
+    padding: 14px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+td {
+    padding: 11px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #ffe44e;
+}
+
+.nivel,
+.nivel-primaria {
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 14px;
+}
+
+.nivel {
+    background-color: var(--verde);
+}
+
+.nivel-primaria {
+    background-color: #f29d1e;
+}
+
+.si {
+    color: #2e7d00;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+/* =====================================================================
+   7. PIE DE PÁGINA
+   ===================================================================== */
+#footer {
+    background-color: var(--dorado);
+    background-image: linear-gradient(180deg, var(--dorado), #e8a830);
+    padding: 35px 25px 15px 25px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    min-width: 230px;
+    background-color: #ffffff;
+    border: 2px solid #7aad1e;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 7.1 Formulario "Solicitud de información" --- */
+.box label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555555;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.box input[type="text"],
+.box input[type="tel"],
+.box input[type="email"],
+.box textarea,
+.box select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #fafafa;
+}
+
+.box input[type="text"]:focus,
+.box input[type="tel"]:focus,
+.box input[type="email"]:focus,
+.box textarea:focus,
+.box select:focus {
+    outline: none;
+    border-color: var(--naranja);
+    background-color: #fff8f0;
+}
+
+.grupo-radio {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.grupo-radio label {
+    font-weight: normal;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.box input[type="submit"] {
+    margin-top: 16px;
+    background-color: var(--naranja);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.box input[type="submit"]:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+/* --- 7.2 Lista de profesores --- */
+.lista-profes > li {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--verde-claro);
+}
+
+.lista-profes > li:last-child {
+    border-bottom: none;
+}
+
+.lista-profes > li strong {
+    display: block;
+    font-size: 15px;
+    color: var(--verde-titulo);
+    margin-bottom: 6px;
+}
+
+.lista-profes > li ul {
+    list-style: circle;
+    margin-left: 20px;
+}
+
+.lista-profes > li ul li {
+    font-size: 14px;
+    color: #555555;
+    padding: 2px 0;
+}
+
+.profe-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.info-profe {
+    flex: 1;
+}
+
+.foto-profe {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--naranja);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+/* --- 7.3 Contacto, mapa y redes --- */
+.contacto p {
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.mapa-contenedor {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 4px solid var(--naranja);
+    box-shadow: 0 6px 20px rgba(249, 121, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 250px;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+.mapa-contenedor:hover {
+    box-shadow: 0 10px 28px rgba(249, 121, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.redes {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.redes img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 14px;
+    border-top: 1px solid #c98e1a;
+}
+
+.copyright p {
+    font-size: 13px;
+    color: #7a5c00;
+    font-weight: 600;
+}
+
+
+/* =====================================================================
+   8. FORMULARIOS DE ACCESO (login y registro)
+   ===================================================================== */
+
+/* --- 8.1 Piezas compartidas por login y registro --- */
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Campos de texto: solo una línea inferior que se pinta al escribir */
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.grupo-formulario input:focus {
+    border-bottom-color: #ff7f00;
+    outline: none;
+}
+
+.grupo-formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-formulario select:focus {
+    border-color: #3182ce;
+    outline: none;
+}
+
+/* --- 8.2 Login --- */
+#seccion-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contenedor-login {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    padding: 35px;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+.contenedor-login h2 {
+    font-family: "Fontdiner Swanky", serif;
+    color: var(--naranja);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.contenedor-login p {
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contenedor-login .grupo-formulario label {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+.opciones-login label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.opciones-login input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.olvido-pass:hover {
+    text-decoration: underline;
+    color: var(--naranja);
+}
+
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--naranja);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+.btn-ingresar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Botón "Registrarse" (enlace con apariencia de botón) */
+.btn-registrarse {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    text-align: center;
+    background-color: transparent;
+    color: var(--naranja);
+    border: 2px solid var(--naranja);
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-registrarse:hover {
+    background-color: var(--naranja);
+    color: #ffffff;
+}
+
+/* --- 8.3 Registro --- */
+#seccion-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 40px 20px;
+}
+
+.contenedor-registro {
+    background-color: #ffffff;
+    max-width: 650px;
+    width: 100%;
+    padding: 35px;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenedor-registro h2 {
+    font-family: 'Fontdiner Swanky', cursive;
+    color: var(--naranja);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contenedor-registro p {
+    color: #666666;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Filas de dos columnas */
+.fila-formulario {
+    display: flex;
+    gap: 20px;
+}
+
+.fila-formulario .grupo-formulario {
+    flex: 1;
+}
+
+.terminos-registro {
+    margin: 15px 0 25px 0;
+    font-size: 0.85rem;
+    color: #555555;
+    line-height: 1.4;
+}
+
+.terminos-registro input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.btn-registrar {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--naranja);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-registrar:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+.enlace-retorno {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.enlace-retorno a {
+    font-weight: 700;
+}
+
+.enlace-retorno a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================================
+   9. MENSAJES DE LA APLICACIÓN
+   Los escribe JavaScript con textContent y className:
+   mensajeLogin.className = "mensaje-login exito";
+   ===================================================================== */
+.contenedor-login .mensaje-login {
+    margin: 10px 0 15px;
+    font-weight: 700;
+}
+
+.mensaje-login.exito {
+    color: #1e8449;
+}
+
+.mensaje-login.error {
+    color: #c0392b;
+}
+
+
+/* =====================================================================
+   10. RESPONSIVE (celulares)
+   ===================================================================== */
+@media (max-width: 600px) {
+    /* Las dos columnas del registro pasan a una sola */
+    .fila-formulario {
+        flex-direction: column;
+        gap: 0;
+    }
+}
