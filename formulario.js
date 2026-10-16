@@ -119,7 +119,7 @@ function editar(Editar) {
 // Función para eliminar estudiante
 function eliminar(Eliminar) {
     let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
-    listaEstudiantes.splice(Eliminar, 1);
+    listaEstudia<ntes.splice(Eliminar, 1);
     localStorage.setItem("estudiantesSanAntonio", JSON.stringify(listaEstudiantes));
     mostrarEstudiantes();
 }
