@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Docente — IE San Antonio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilospropios.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body class="dashboard">
+    <header>
+        <div id="fondoCabeza">
+            <div id="cajaLogo">
+                <img src="imagenes/colegio.png" id="logo" alt="Logo IE San Antonio">
+            </div>
+            <div id="textoLogo">
+                <span class="nombre-colegio">IE San Antonio</span>
+                <span class="ciudad">Rionegro, Antioquia</span>
+            </div>
+        </div>
+        <nav id="menuPpal">
+            <ul>
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#notas">Registrar notas</a></li>
+                <li><a href="#asistencia">Tomar asistencia</a></li>
+                <li><a href="inicio-sesion.html" id="salir">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tablero">
+        <section class="saludo-bloque" id="resumen">
+            <div class="saludo-docente">
+                <img src="imagenes/colegio.png" id="fotoDoc" class="foto-profe" alt="Foto del docente">
+                <div>
+                    <h1 id="saludo"></h1>
+                    <p id="datosDoc"></p>
+                </div>
+            </div>
+            <span class="rol-etiqueta">Docente</span>
+        </section>
+
+        <section class="resumen" id="tarjetas"></section>
+
+        <section class="panel ancho">
+            <div class="controles">
+                <div>
+                    <label for="selGrado">Grado</label>
+                    <select id="selGrado"></select>
+                </div>
+                <div>
+                    <label for="selPeriodo">Período</label>
+                    <select id="selPeriodo">
+                        <option value="0">Período 1</option><option value="1">Período 2</option>
+                        <option value="2">Período 3</option><option value="3" selected>Período 4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inFecha">Fecha de la clase</label>
+                    <input type="date" id="inFecha">
+                </div>
+            </div>
+        </section>
+
+        <div class="rejilla" style="margin-top:20px">
+            <section class="panel" id="notas">
+                <h4>Registrar notas</h4>
+                <p class="vacio" style="padding-top:0">Escala de 1,0 a 5,0. La nota mínima para aprobar es 3,0.</p>
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead><tr><th class="izq">Estudiante</th><th>Nota</th><th>Definitiva</th></tr></thead>
+                        <tbody id="tablaNotas"></tbody>
+                    </table>
+                </div>
+                <button type="button" class="btn-accion" id="guardarNotas" style="margin-top:14px">Guardar notas</button>
+                <p class="aviso" id="avisoNotas"></p>
+            </section>
+
+            <section class="panel" id="asistencia">
+                <h4>Tomar asistencia</h4>
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead><tr><th class="izq">Estudiante</th><th>Asistencia</th></tr></thead>
+                        <tbody id="tablaAsistencia"></tbody>
+                    </table>
+                </div>
+                <button type="button" class="btn-accion" id="guardarAsistencia" style="margin-top:14px">Guardar asistencia</button>
+                <p class="aviso" id="avisoAsistencia"></p>
+            </section>
+        </div>
+    </main>
+
+    <script src="datos.js"></script>
+    <script src="portal-docente.js"></script>
+</body>
+</html>
