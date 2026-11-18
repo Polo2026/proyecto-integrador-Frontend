@@ -1,7 +1,28 @@
-const usuarios = [
-    { usuario: "admin", correo: "admin@colegio.com", contrasena: "12345" }
-];
+let usuarios = [];
 
+async function cargarUsuarios() {
+
+    try {
+
+        const respuesta = await fetch("usuarios.json");
+
+        usuarios = await respuesta.json();
+
+        localStorage.setItem(
+            "usuarios",
+            JSON.stringify(usuarios)
+        );
+
+        console.log("Usuarios cargados:", usuarios);
+
+    } catch (error) {
+
+        console.error("Error:", error);
+
+    }
+}
+
+cargarUsuarios();
 
 const formLogin = document.querySelector("#formLogin");
 const inputUsuario = document.querySelector("#usuario");
@@ -62,9 +83,19 @@ formLogin.addEventListener("submit", (evento) => {
 
         sessionStorage.setItem("nombreUsuario", usuario.usuario);
 
-        setTimeout(() => {
-            window.location.href = "portal-admin.html";
-        }, 1000);
+     setTimeout(() => {
+    if (usuario.rol === "admin") {
+        window.location.href = "portal-admin.html";
+    }
+    else if (usuario.rol === "docente") {
+        window.location.href = "portal-docente.html";
+    }
+    else if (usuario.rol === "estudiante") {
+        window.location.href = "portal-estudiante.html";
+    }
+
+}, 1000);
+
     } else {
         
         intentos++;
