@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estudiante — IE San Antonio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilospropios.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body class="dashboard">
+    <header>
+        <div id="fondoCabeza">
+            <div id="cajaLogo">
+                <img src="imagenes/colegio.png" id="logo" alt="Logo IE San Antonio">
+            </div>
+            <div id="textoLogo">
+                <span class="nombre-colegio">IE San Antonio</span>
+                <span class="ciudad">Rionegro, Antioquia</span>
+            </div>
+        </div>
+        <nav id="menuPpal">
+            <ul>
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#notas">Mis notas</a></li>
+                <li><a href="#asistencia">Mi asistencia</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="inicio-sesion.html" id="salir">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tablero">
+        <section class="saludo-bloque" id="resumen">
+            <div>
+                <h1 id="saludo"></h1>
+                <p id="datosEst"></p>
+            </div>
+            <span class="rol-etiqueta">Estudiante</span>
+        </section>
+
+        <section class="resumen" id="tarjetas"></section>
+        <p class="aviso" id="avisoNotas"></p>
+
+        <div class="rejilla">
+            <section class="panel ancho" id="notas">
+                <h4>Mis notas por período</h4>
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <tr><th class="izq">Materia</th><th>Período 1</th><th>Período 2</th><th>Período 3</th><th>Período 4</th><th>Definitiva</th><th>Estado</th></tr>
+                        </thead>
+                        <tbody id="tablaNotas"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel" id="asistencia">
+                <h4>Mi asistencia</h4>
+                <div id="bloqueAsistencia"></div>
+            </section>
+
+            <section class="panel" id="actividades">
+                <h4>Para tu grado en 2026-I</h4>
+                <p><strong>Calendario de Bachillerato</strong></p>
+                <ul class="lista-profes" style="margin:8px 0 14px">
+                    <li style="border:none;margin:0;padding:2px 0">Febrero: Inicio de clases</li>
+                    <li style="border:none;margin:0;padding:2px 0">Marzo: Feria de la Ciencia</li>
+                    <li style="border:none;margin:0;padding:2px 0">Abril: Visita a universidades</li>
+                    <li style="border:none;margin:0;padding:2px 0">Mayo: Día de la Familia</li>
+                </ul>
+                <p><strong>Actividades extra-curriculares</strong></p>
+                <div class="dias" style="margin-top:8px">
+                    <span class="chip ok">Robótica</span>
+                    <span class="chip ok">Semillero Matemáticas</span>
+                    <span class="chip ok">Fútbol</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="datos.js"></script>
+    <script src="portal-estudiante.js"></script>
+</body>
+</html>
