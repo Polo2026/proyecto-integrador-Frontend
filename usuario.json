@@ -1,0 +1,20 @@
+[
+  {
+    "usuario": "admin",
+    "correo": "admin@colegio.com",
+    "contrasena": "12345",
+    "rol": "admin"
+  },
+  {
+    "usuario": "docente",
+    "correo": "docente@colegio.com",
+    "contrasena": "docente",
+    "rol": "docente"
+  },
+  {
+    "usuario": "estudiante",
+    "correo": "estudiante@colegio.com",
+    "contrasena": "estudiante",
+    "rol": "estudiante"
+  }
+]

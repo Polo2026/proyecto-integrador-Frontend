@@ -25,7 +25,7 @@ formulario.addEventListener("submit", function (evento) {
     // Obtener lista actual
     let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
 
-    // Validar que la cédula o otro no esté repetida
+    // Validar que documento identidad no esté repetida
     let existe = listaEstudiantes.some((estudiante, i) => {
         return estudiante.documento === numDoc && i !== editIndex;
     });
@@ -36,7 +36,7 @@ formulario.addEventListener("submit", function (evento) {
     }
 
     if (editIndex !== null) {
-        // Actualizar estudiante existente
+        // Update estudiante existente
         listaEstudiantes[editIndex] = {
             nombres,
             apellidos,
@@ -64,7 +64,7 @@ formulario.addEventListener("submit", function (evento) {
     }
 
     // Guardar lista en localStorage
-    localStorage.setItem("estudiantesSanAntonio", JSON.stringify(listaEstudiantes));
+    localStorage.setItem("usuario", JSON.stringify(listaEstudiantes));
 
     // Resetear formulario y refrescar tabla
     formulario.reset();
@@ -73,7 +73,7 @@ formulario.addEventListener("submit", function (evento) {
 
 // Función para mostrar estudiantes en la tabla
 function mostrarEstudiantes() {
-    let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
+    let listaEstudiantes = JSON.parse(localStorage.getItem("usuario")) || [];
     let cuerpoTabla = document.querySelector("#tabla-estudiantes tbody");
     cuerpoTabla.innerHTML = "";
 
@@ -119,13 +119,10 @@ function editar(Editar) {
 // Función para eliminar estudiante
 function eliminar(Eliminar) {
     let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
-    listaEstudia<ntes.splice(Eliminar, 1);
+    listaEstudiantes.splice(Eliminar, 1);
     localStorage.setItem("estudiantesSanAntonio", JSON.stringify(listaEstudiantes));
     mostrarEstudiantes();
 }
 
 // Mostrar estudiantes al cargar la página
 document.addEventListener("DOMContentLoaded", mostrarEstudiantes);
-
-
-
