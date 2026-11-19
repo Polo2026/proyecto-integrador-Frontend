@@ -1,4 +1,5 @@
 let usuarios = [];
+<<<<<<< HEAD:js/inicio-sesion.js
  
 async function cargarUsuarios() { //Se trae la info desde json.
  
@@ -6,10 +7,22 @@ async function cargarUsuarios() { //Se trae la info desde json.
         const respuesta = await fetch("usuario.json");
         usuarios = await respuesta.json();
  
+=======
+
+async function cargarUsuarios() {
+
+    try {
+
+        const respuesta = await fetch("usuarios.json");
+
+        usuarios = await respuesta.json();
+
+>>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
         localStorage.setItem(
             "usuarios",
             JSON.stringify(usuarios)
         );
+<<<<<<< HEAD:js/inicio-sesion.js
  
         console.log("Usuarios cargados:", usuarios);
  
@@ -20,6 +33,20 @@ async function cargarUsuarios() { //Se trae la info desde json.
  
 cargarUsuarios();
  
+=======
+
+        console.log("Usuarios cargados:", usuarios);
+
+    } catch (error) {
+
+        console.error("Error:", error);
+
+    }
+}
+
+cargarUsuarios();
+
+>>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
 const formLogin = document.querySelector("#formLogin");
 const inputUsuario = document.querySelector("#usuario");
 const inputContrasena = document.querySelector("#contrasena");
@@ -81,6 +108,7 @@ formLogin.addEventListener("submit", (evento) => {
  
      setTimeout(() => {
 
+<<<<<<< HEAD:js/inicio-sesion.js
             switch (usuario.rol) {
 
                 case "admin":
@@ -98,6 +126,23 @@ formLogin.addEventListener("submit", (evento) => {
         }, 1000);
 
     } else {       
+=======
+     setTimeout(() => {
+    if (usuario.rol === "admin") {
+        window.location.href = "portal-admin copy.html";
+    }
+    else if (usuario.rol === "docente") {
+        window.location.href = "portal-docente.html";
+    }
+    else if (usuario.rol === "estudiante") {
+        window.location.href = "portal-estudiante.html";
+    }
+
+}, 1000);
+
+    } else {
+        
+>>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
         intentos++;
         sessionStorage.setItem("intentos", intentos);
  
