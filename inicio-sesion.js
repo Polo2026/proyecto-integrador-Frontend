@@ -85,7 +85,7 @@ formLogin.addEventListener("submit", (evento) => {
 
      setTimeout(() => {
     if (usuario.rol === "admin") {
-        window.location.href = "portal-admin.html";
+        window.location.href = "portal-admin copy.html";
     }
     else if (usuario.rol === "docente") {
         window.location.href = "portal-docente.html";
