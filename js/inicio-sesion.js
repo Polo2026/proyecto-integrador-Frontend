@@ -1,78 +1,51 @@
 let usuarios = [];
-<<<<<<< HEAD:js/inicio-sesion.js
- 
-async function cargarUsuarios() { //Se trae la info desde json.
- 
-    try {
-        const respuesta = await fetch("usuario.json");
-        usuarios = await respuesta.json();
- 
-=======
-
 async function cargarUsuarios() {
 
     try {
 
-        const respuesta = await fetch("usuarios.json");
+        const respuesta = await fetch("usuario.json");
 
         usuarios = await respuesta.json();
-
->>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
         localStorage.setItem(
             "usuarios",
             JSON.stringify(usuarios)
         );
-<<<<<<< HEAD:js/inicio-sesion.js
- 
-        console.log("Usuarios cargados:", usuarios);
- 
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
- 
-cargarUsuarios();
- 
-=======
 
         console.log("Usuarios cargados:", usuarios);
 
     } catch (error) {
-
         console.error("Error:", error);
-
     }
 }
 
 cargarUsuarios();
 
->>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
 const formLogin = document.querySelector("#formLogin");
 const inputUsuario = document.querySelector("#usuario");
 const inputContrasena = document.querySelector("#contrasena");
 const mensajeLogin = document.querySelector("#mensajeLogin");
 const botonIngresar = document.querySelector(".btn-ingresar");
- 
- 
+
+
 const MAX_INTENTOS = 3;
 let intentos = Number(sessionStorage.getItem("intentos")) || 0;
- 
- 
+
+
 const bloquearFormulario = () => {
     mensajeLogin.textContent = "Superó los intentos permitidos. Acceso bloqueado.";
     mensajeLogin.className = "mensaje-login error";
- 
+
     inputUsuario.disabled = true;
     inputContrasena.disabled = true;
     botonIngresar.disabled = true;
 };
- 
- 
+
+
 if (intentos >= MAX_INTENTOS) {
     bloquearFormulario();
 }
- 
- 
+
+
 const verificarCredenciales = (identificador, contrasena) => {
     const buscado = identificador.trim().toLowerCase();
     for (let i = 0; i < usuarios.length; i++) {
@@ -83,32 +56,32 @@ const verificarCredenciales = (identificador, contrasena) => {
     }
     return null;
 };
- 
- 
+
+
 formLogin.addEventListener("submit", (evento) => {
     evento.preventDefault();
- 
-   
+
+
     if (intentos >= MAX_INTENTOS) {
         bloquearFormulario();
         return;
     }
- 
+
     const usuario = verificarCredenciales(inputUsuario.value, inputContrasena.value);
- 
+
     if (usuario !== null) {
-       
+
         intentos = 0;
         sessionStorage.removeItem("intentos");
- 
+
         mensajeLogin.textContent = `¡Bienvenid@, ${usuario.usuario}!`;
         mensajeLogin.className = "mensaje-login exito";
- 
-        sessionStorage.setItem("nombreUsuario", usuario.usuario);
- 
-     setTimeout(() => {
 
-<<<<<<< HEAD:js/inicio-sesion.js
+        sessionStorage.setItem("nombreUsuario", usuario.usuario);
+
+        setTimeout(() => {
+
+
             switch (usuario.rol) {
 
                 case "admin":
@@ -125,27 +98,12 @@ formLogin.addEventListener("submit", (evento) => {
             }
         }, 1000);
 
-    } else {       
-=======
-     setTimeout(() => {
-    if (usuario.rol === "admin") {
-        window.location.href = "portal-admin copy.html";
-    }
-    else if (usuario.rol === "docente") {
-        window.location.href = "portal-docente.html";
-    }
-    else if (usuario.rol === "estudiante") {
-        window.location.href = "portal-estudiante.html";
-    }
-
-}, 1000);
-
     } else {
-        
->>>>>>> 022bc982729b6e3189a5e4426a5ff6603927d431:inicio-sesion.js
+
+
         intentos++;
         sessionStorage.setItem("intentos", intentos);
- 
+
         if (intentos >= MAX_INTENTOS) {
             bloquearFormulario();
         } else {

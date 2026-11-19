@@ -64,7 +64,7 @@ formulario.addEventListener("submit", function (evento) {
     }
 
     // Guardar lista en localStorage
-    localStorage.setItem("usuario", JSON.stringify(listaEstudiantes));
+    localStorage.setItem("estudiantesSanAntonio", JSON.stringify(listaEstudiantes));
 
     // Resetear formulario y refrescar tabla
     formulario.reset();
@@ -73,7 +73,7 @@ formulario.addEventListener("submit", function (evento) {
 
 // Función para mostrar estudiantes en la tabla
 function mostrarEstudiantes() {
-    let listaEstudiantes = JSON.parse(localStorage.getItem("usuario")) || [];
+    let listaEstudiantes = JSON.parse(localStorage.getItem("estudiantesSanAntonio")) || [];
     let cuerpoTabla = document.querySelector("#tabla-estudiantes tbody");
     cuerpoTabla.innerHTML = "";
 
